@@ -1,7 +1,6 @@
 flask 
 pytz
 datetime
-smtplib
 socket
 numpy
 winsound
