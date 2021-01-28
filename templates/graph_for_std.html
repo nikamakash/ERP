@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>graph view for student</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+    <h1 style="background-color: #2f1d3a; color:white; font-size: 32px; text-align:center">
+        Student Report for {{filter[0]}},{{filter[1]}}
+    </h1>
+
+
+
+<div class="container" style="text-align:center;">
+
+    <div>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<a href="/mgmtdashboard/individual/student"><input style="background-color: grey;
+  border: none;
+  color: white;
+  width: 100px;
+  padding: 15px 32px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;" type="button" value="Back" name="Faculty Login"></a>
+&emsp;&emsp;<b style="font-size: 24px;">Monthly Attendance: {{filter[2]}} % </b>        &emsp;&emsp;&emsp;
+<a href="/logout/logoutmgmt" style=""> <input  style="background-color: red; /* Green */
+  border: none;
+  color: white;
+  width: 150px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;" type="button" value="Logout" > </a>
+    </div>
+
+
+    <br>
+  <img  src="/static/bar.png" class="img-thumbnail" alt=" " width="1080" height="500"/>
+
+</div>
+</body>
+</html>
