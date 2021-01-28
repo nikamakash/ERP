@@ -4,7 +4,7 @@ datetime
 sqlite3
 smtplib
 socket
-numpy as np
+numpy
 winsound
 matplotlib
 os
