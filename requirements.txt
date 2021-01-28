@@ -2,7 +2,6 @@ flask
 pytz
 datetime
 numpy
-winsound
 matplotlib
 os
 csv
