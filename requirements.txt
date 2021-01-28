@@ -8,7 +8,6 @@ Pytz
 datetime
 numpy
 matplotlib
-Smtplib
 Socket
 Winsound
 Os
