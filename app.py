@@ -30,12 +30,12 @@ app.secret_key = 'ERP'
 #     return response
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def home():
     return render_template('home.html')
 
 
-@app.route('/admin')
+@app.route('/admin', methods=["GET", "POST"])
 def admin():
     conn = sqlite3.connect('attendance.db')
     cursor = conn.cursor()
@@ -47,7 +47,7 @@ def admin():
 
 
 # ***************************************************************************
-@app.route('/register')
+@app.route('/register', methods=["GET", "POST"])
 def register():
     return render_template('register.html')
 
@@ -386,7 +386,7 @@ def sendmail():
 # *************************************************************************
 
 
-@app.route("/mgmtDashboard")
+@app.route("/mgmtDashboard", methods=["GET", "POST"])
 def mgmtdashboard():
     return render_template("mgmtdashboard.html")
 
@@ -684,7 +684,7 @@ def faculty_analytics():
     return render_template('onefac_graphview.html', filter=session['filter'])
 
 
-@app.route("/get_csv")
+@app.route("/get_csv", methods=["GET", "POST"])
 def get_csv():
     with open('attendance.csv', 'w') as f:
         data = session['data']
@@ -703,4 +703,4 @@ def get_csv():
 # **********************************************************************
 
 if __name__ == "__main__":
-    app.run(port=5000)
+    app.run()
