@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty Dashboard</title>
+</head>
+<body>
+<div>
+<br><br>
+<h2 style="text-align:center;"> Welcome, {{user}} !</h2>
+<br>
+</div>
+
+<div>   {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <h3 style="text-align:center;">{{message}}</h3>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+
+<div style="text-align:center;">
+    <form method="post">
+        <h2>Attendance on {{date}}</h2><br>
+
+        <input type="radio" name="attendance" style="width: 2.5em; height:2.5em; "  value="1" >
+        <a style="background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  width: 150px;
+  height: 10px;
+  padding: 25px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  margin: 4px 4px;
+  cursor: pointer;"><b>Present</b></a><br><br>
+
+        <input style="background-color: #FF8C00; /* Green */
+  border: none;
+  color: white;
+  width: 240px;
+  height: 10px;
+  padding: 25px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  margin: 4px 4px;
+  cursor: pointer;" type="submit" name="attendance"   value="Send Leave Mail">
+
+  <br><br><br><br>
+  <input style="font-family: 'Ubuntu', sans-serif;
+
+  align:center;
+
+  width: 170px;
+  height: 40px;
+  line-height: 1;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 3px solid #8C82FC;
+  background: #fff;
+  color: #8C82FC;
+  border-radius: 40px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all .35s;" type="submit"  value="Submit" >
+</form>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Analysis</title>
+</head>
+<body>
+<div style="text-align:center; background-color: #2f1d3a; ">
+    <br><br>
+    <h1 style="background-color: #2f1d3a; color:white; font-size: 42px;">
+        Student Analysis
+    </h1>
+    <br><br>
+</div>
+
+<div style="text-align:center">
+    <br><br>
+    <form method="post">
+        <br><br>
+
+
+        <b style="line-height: 1;
+  font-size: 22px;
+  font-weight: bold;"> Name : </b>
+        <select name="Name" title="name" style="width:180px; height:25px; font-family: 'Ubuntu', sans-serif;
+  align:center;
+  width: 170px;
+  height: 40px;
+  line-height: 1;
+  font-size: 18px;
+  font-weight: bold;" required>
+        <option name="select" >select</option>
+
+            {% for student in students %}
+        <option  value="{{student[0]}}">{{student[0]}}</option>
+            {% endfor %}
+
+
+        </select>
+        &emsp;&emsp;&emsp;&emsp;
+
+        <b style="line-height: 1;
+  font-size: 22px;
+  font-weight: bold;"> Month : </b>
+        <select name="Month" title="month" style="width:180px; height:25px; font-family: 'Ubuntu', sans-serif;
+  align:center;
+  width: 170px;
+  height: 40px;
+  line-height: 1;
+  font-size: 18px;
+  font-weight: bold;">
+        <option name="January" value="1">January</option>
+        <option name="February" value="2">February</option>
+        <option name="March" value="3">March</option>
+        <option name="April" value="4">April</option>
+        <option name="May" value="5">May</option>
+        <option name="June" value="6">June</option>
+        <option name="July" value="7">July</option>
+        <option name="August" value="8">August</option>
+        <option name="September" value="9">September</option>
+        <option name="October" value="10">October</option>
+        <option name="November" value="11">November</option>
+        <option name="December" value="12">December</option>
+        </select>
+        &emsp;&emsp;&emsp;&emsp;
+
+        <b style="line-height: 1;
+  font-size: 22px;
+  font-weight: bold;"> Year : </b>
+        <select name="Year" title="year" style="width:180px; height:25px; font-family: 'Ubuntu', sans-serif;
+  align:center;
+  width: 170px;
+  height: 40px;
+  line-height: 1;
+  font-size: 18px;
+  font-weight: bold;">
+        <option name="2021" value="2021">2021</option>
+        <option name="2020" value="2020">2020</option>
+        <option name="2019" value="2019">2019</option>
+
+        </select>
+        &emsp;&emsp;&emsp;&emsp;
+
+        <br><br><br>
+        <div>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+                <h3 style="text-align:center;">{{message}}</h3>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </div>
+
+        <br><br><br>
+        <input style="font-family: 'Ubuntu', sans-serif;
+
+  align:center;
+
+  width: 170px;
+  height: 40px;
+  line-height: 1;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 3px solid #8C82FC;
+  background: #fff;
+  color: #8C82FC;
+  border-radius: 40px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all .35s;" type="submit"  value="Submit" >
+    </form>
+<br><br>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+
+<div>
+<br> <br>
+<h1 style="text-align: center;"> <b>College ERP For Attendance </b></h1> <br> <br> <br>
+
+</div>
+<div>   {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <h3 style="text-align:center;">{{message}}</h3>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+
+<div>
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="/Login/StudentLogin"><input style="background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  width: 250px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;" type="button"  name="Student_Login" value="Student Login "></a>
+&emsp;&emsp;
+<a href="/Login/FacultyLogin"><input style="background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  width: 250px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;" type="button" value="Faculty Login " name="Faculty Login"></a>
+&emsp;&emsp;
+<a href="/Login/ManagementLogin"><input style="background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  width: 250px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;" type="button" value="Management Login " name="Mgmt_Login"></a>
+&emsp;&emsp;
+<a href="/Login/PrincipalLogin"><input style="background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  width: 250px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;" type="button" name="Principal_login" value="Principal Login "></a>
+</div>
+<div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <a href="/register">User Registration</a>
+</div>
+</body>
+</html>
