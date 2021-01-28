@@ -1,0 +1,11 @@
+flask 
+pytz
+datetime
+sqlite3
+smtplib
+socket
+numpy as np
+winsound
+matplotlib
+os
+csv
