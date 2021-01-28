@@ -5,7 +5,7 @@ import sqlite3
 import smtplib
 import socket
 import numpy as np
-import winsound
+# import winsound
 import matplotlib.pyplot as plt
 import os
 import csv
@@ -444,8 +444,8 @@ def studentview():
                 plt.ylim(0, 100)
                 plt.xticks(day)
                 plt.savefig('static/bar.png')
-                if avg < 50:
-                    winsound.PlaySound('Complete', winsound.SND_ALIAS)
+                # if avg < 50:
+                    # winsound.PlaySound('Complete', winsound.SND_ALIAS)
                 return redirect('/analytics')
         flash('No Data Found...!')
         return redirect('/mgmtDashboard/studentview')
@@ -503,8 +503,8 @@ def facultyview():
                 plt.ylim(0, 100)
                 plt.xticks(day)
                 plt.savefig('static/bar.png')
-                if avg < 50:
-                    winsound.PlaySound('Complete', winsound.SND_ALIAS)
+                # if avg < 50:
+                    # winsound.PlaySound('Complete', winsound.SND_ALIAS)
                 return redirect('/analytics')
         flash('No Data Found...!')
         return redirect('/mgmtDashboard/facultyview')
@@ -573,8 +573,8 @@ def student_analysis():
                 plt.ylim(0, 100)
                 plt.xticks(day)
                 plt.savefig('static/bar.png')
-                if avg < 50:
-                    winsound.PlaySound('Complete', winsound.SND_ALIAS)
+                # if avg < 50:
+                    # winsound.PlaySound('Complete', winsound.SND_ALIAS)
                 return redirect('/analytics/bystudent')
         flash('No Data Found...!')
         return redirect('/mgmtDashboard/individual/student')
@@ -657,7 +657,7 @@ def faculty_analysis():
                     cursor.execute(emailq, (session['name'], session['user'], date, subject, msg))
                     conn.commit()
                     conn.close()
-                    winsound.PlaySound('Complete', winsound.SND_ALIAS)
+                    # winsound.PlaySound('Complete', winsound.SND_ALIAS)
                 return redirect('/analytics/byfaculty')
         flash('No Data Found...!')
         return redirect('/mgmtDashboard/individual/faculty')
