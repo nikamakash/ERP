@@ -8,10 +8,8 @@ Pytz
 datetime
 numpy
 matplotlib
-Sqlite3
 Smtplib
 Socket
-numpy 
 Winsound
 Os
 Csv
