@@ -17,17 +17,17 @@ app = Flask(__name__)
 app.secret_key = 'ERP'
 
 
-# @app.before_request
-# def before_request():
-#     pass
+@app.before_request
+def before_request():
+    pass
 
 
-# @app.after_request
-# def after_request(response):
-#     response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate, public, max-age=0"
-#     response.headers["Expires"] = '0'
-#     response.headers["Pragma"] = "no-cache"
-#     return response
+@app.after_request
+def after_request(response):
+    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate, public, max-age=0"
+    response.headers["Expires"] = '0'
+    response.headers["Pragma"] = "no-cache"
+    return response
 
 
 @app.route("/", methods=["GET", "POST"])
