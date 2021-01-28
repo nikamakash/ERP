@@ -17,9 +17,9 @@ app = Flask(__name__)
 app.secret_key = 'ERP'
 
 
-@app.before_request
-def before_request():
-    pass
+# @app.before_request
+# def before_request():
+#     pass
 
 
 @app.after_request
