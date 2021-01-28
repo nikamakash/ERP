@@ -3,5 +3,4 @@ pytz
 datetime
 numpy
 matplotlib
-os
 csv
