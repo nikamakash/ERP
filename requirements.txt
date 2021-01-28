@@ -1,7 +1,6 @@
 flask 
 pytz
 datetime
-socket
 numpy
 winsound
 matplotlib
